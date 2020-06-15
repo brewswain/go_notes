@@ -121,7 +121,7 @@ The program itself runs, **but!** We have a new problem, which leads us back to 
 
 As it stands, We want our program to report an error and stop running if we encounter a problem reading input from the keyboard. However, it currently stops running even when everything's working correctly 😔
 
-You may have noticed that the error message we return is an extremely loquacious... <nil>.
+You may have noticed that the error message we return is an extremely loquacious... `nil`.
 Yeah. That's our error message.
 
 This is due to functions and methods like Readstring() returning an error value of nil to suggest that there's nothing there. So basically, `err` being `nil` suggests that there's no error. However, our program is currently setup to just report the `nil` error. We actually want the program to exit if `err` has a value _other_ than `nil`.
